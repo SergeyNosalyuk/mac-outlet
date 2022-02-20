@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MacOutlet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header-holder">
+            <a class="header-logo-main" href=""><img src="items/image 1.png" alt="Store-logo"></a>
+            <button id="header-btn" class="header-btn"><div class="icon-block"><img src="img/icons/basket.svg" alt=" icon"></div></button>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <section class="banner"style="background-image: url(img/banners/ipad_air_banner.jpg);">
+
+           <!--  <div id="slider">
+              <div class="active">
+                <img width="946" height="472" src="img/banners/ipad_air_banner.jpg" alt="1" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/air_pods_max_banner.jpg" alt="2" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/airpods_pro_banner.png" alt="3" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/apple_tv_banner.png" alt="4" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/iphone_12_banner.jpg" alt="5" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/mac_book_banner.jpg" alt="6" class="car-img">
+              </div>
+              <div class="inactive">
+                <img width="946" height="473" src="img/banners/watch_banner.jpg" alt="7" class="car-img">
+              </div>
+            </div> -->
+
+            <div class="basket-block">
+              <div class="basket">
+                <div class="basket-header">
+                  <div class="basket-container">
+                    <h2>Shopping Cart</h2>
+                    <p>Checkout is almost done!</p>
+                  </div>
+                </div>
+                <div class="basket-body">
+                  <div class="basket-container">
+                    <img src="items/airpods_pro.jpg" alt="basket img" class="basket-body-img">
+                    <div class="basket-item">
+                      <h3 class="basket-item-title">Apple AirPods Pro</h3>
+                      <p class="basket-item-price"><span>$600</span></p>
+                    </div>
+                    <div class="basket-item-add">
+                      <button class="arrow-left"><img src="img/icons/simplearrow.svg" alt="Arrow left" ></button>
+                      <p id="item-quantity">2</p>
+                      <button class="arrow-right"><img src="img/icons/simplearrow.svg" alt="Arrow right" ></button>
+                    </div>
+                    <button id="basket-delete" class="basket-item-delete"><img src="img/icons/icons8-close.svg" alt="Delete icon"></button>
+                  </div>
+                </div>
+                <div class="basket-footer">
+                  <div class="basket-container">
+                    <div class="basket-footer-total">
+                      <p id="basket-footer-total-pcs"><span class="total-am"> Total amount:</span> <span><span class="total-pcs">3</span> pcs.</span></p>
+                      <p id="basket-footer-total-price">Total price: <span><span class="total-price">600</span>$</span></p>
+                    </div>                  
+                  </div>                
+                </div>
+                <div class="basket-btn">
+                  <button class="btn-buy">Buy</button>
+                </div>
+              </div>            
+            </div>
+            <div class="banner-content">
+                <p class="banner-text">IPad Air</p>
+                <button type="button" class="banner-btn">Add to cart</button>
+            </div>
+          </section>
+          <section id="filter-section" class="filter-section">
+            <div class="search">              
+              <div class="search_icon str_icon_search">
+                <input class="search_input" type="text" placeholder="Enter device name...">
+              </div>
+              <button id='search_icon-filter' class="search_icon-blue search_icon-filter"><img src="img/icons/filter.svg" alt="Filter icon"></button>
+              <a href="#"><div class="search_icon-blue"><img src="img/icons/settings.svg" alt="Settings icon"></div></a>
+            </div>
+            <div class="content">
+              <div id="filter-block-close" class="filter-block-close">
+                <div class="filter-card">
+                  <div class="filter-container">
+                    <div class="filter-card-price">
+                      <div class="price-card">
+                        <span>Price</span>
+                        <img id='price-btn' class='price-btn' src="img/icons/arrow_left.svg" alt="Arrow">
+                      </div>
+                      <div id='price-content' class="price-content">
+                        <div class="from">
+                          <span>From</span>
+                          <input class="price_input from_top" type="text" onblur="price()" placeholder="350">
+                        </div>
+                        <div class="to">
+                          <span>To</span>
+                          <input class="price_input to_bottom" type="text" onblur="price()" placeholder="1350">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-card-color">
+                      <div class="color-card">
+                        <span>Color</span>
+                        <img id='color-btn' class='color-btn' src="img/icons/arrow_left.svg" alt="Arrow">
+                      </div>
+                      <div id='color-content' class="color-content">
+                        <div class="check">
+                          <div class="left">
+                            <label><input type="checkbox" value="Red" onclick="color(this)"><span>Red</span></label>
+                            <label><input type="checkbox" value="Green" onclick="color(this)"><span>Green</span></label>
+                            <label><input type="checkbox" value="Black" onclick="color(this)"><span>Black</span></label>
+                            <label><input type="checkbox" value="White" onclick="color(this)"><span>White</span></label>
+                          </div>
+                          <div class="rigth">
+                            <label><input type="checkbox" value="Blue" onclick="color(this)"><span>Blue</span></label>
+                            <label><input type="checkbox" value="Space Grey" onclick="color(this)"><span>Grey</span></label>
+                            <label><input type="checkbox" value="Gold" onclick="color(this)"><span>Gold</span></label>
+                            <label><input type="checkbox" value="Yellow" onclick="color(this)"><span>Yellow</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-card-memory">
+                      <div class="memory-card">
+                        <span>Memory</span>
+                        <img id='memory-btn' class='memory-btn' src="img/icons/arrow_left.svg" alt="Arrow">
+                      </div>
+                      <div id='memory-content' class="memory-content">
+                        <div class="check">
+                          <div class="left">
+                            <label><input type="checkbox" value="32" onclick="memory(this)"><span>32 Gb</span></label>
+                            <label><input type="checkbox" value="64" onclick="memory(this)"><span>64 Gb</span></label>
+                            <label><input type="checkbox" value="128" onclick="memory(this)"><span>128 Gb</span></label>
+                            <label><input type="checkbox" value="256" onclick="memory(this)"><span>256 Gb</span></label>
+                          </div>
+                          <div class="rigth">
+                            <label><input type="checkbox" value="512" onclick="memory(this)"><span>512 Gb</span></label>
+                            <label><input type="checkbox" value="1024" onclick="memory(this)"><span>1 TB</span></label>
+                            <label><input type="checkbox" value="2056" onclick="memory(this)"><span>2 TB</span></label>
+                            <label><input type="checkbox" value="4096" onclick="memory(this)"><span>4 TB</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-card-os">
+                      <div class="os-card">
+                        <span>OS</span>
+                        <img id='os-btn' class='os-btn' src="img/icons/arrow_left.svg" alt="Arrow">
+                      </div>
+                      <div id='os-content' class="os-content">
+                        <div class="check">
+                          <div class="left">
+                            <label><input type="checkbox" value="IOS" onclick="os(this)"><span>IOS</span></label>
+                            <label><input type="checkbox" value="macOS" onclick="os(this)"><span>Mac OS</span></label>
+                            <label><input type="checkbox" value="tvOS" onclick="os(this)"><span>tvOS</span></label>
+                            <label><input type="checkbox" value="Watch OS" onclick="os(this)"><span>Watch OS</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-card-display">
+                      <div class="display-card">
+                        <span>Displаy</span>
+                        <img id='display-btn' class='display-btn' src="img/icons/arrow_left.svg" alt="Arrow">
+                      </div>
+                      <div id='display-content' class="display-content">
+                        <div class="check">
+                          <div class="left">
+                            <label><input type="checkbox" value="2-5" onclick="filterUpdate('display', event)"><span> 2 - 5 inch</span></label>
+                            <label><input type="checkbox" value="5-7" onclick="filterUpdate('display', event)"><span> 5 - 7 inch</span></label>
+                            <label><input type="checkbox" value="7-12" onclick="filterUpdate('display', event)"><span> 7 - 12 inch</span></label>
+                            <label><input type="checkbox" value="12-16" onclick="filterUpdate('display', event)"><span> 12 - 16 inch</span></label>
+                            <label><input type="checkbox" value="17-999" onclick="filterUpdate('display', event)"><span> 16+ inch</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cards">
+                <div class="icon-like-block">
+                  <img onclick="like (this)" src="img/icons/like_empty.svg" >
+                </div>
+              </div>            
+            </div>           
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/modale.js"></script>
+  </body>
+</html>
